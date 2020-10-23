@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Will Burger's Programming Page</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" scr = "./index.js">
   </head>
   <body>
     <header>
@@ -13,16 +13,23 @@
     <main>
       <section id="aboutMe">
         <h2>About Me</h2>
-        <article>
+        <article></article>
           <article id = myPicture>
           <img src="./images/pictureofme.jpg" />
         </article>
+        <button id="bioButton">See Bio</button>
+        <div id="myBio" class="modal">
+          <div class = "modal-content">
+            <span class = "close">&times;</span>
         <p>
           My name is William (Will) Burger and I am currently a programmer
           working in the Accounting Industry. I have 1.5 years experience
           working within the industry but am looking to make a pivot to a more
           technological role.
         </p>
+      </div>
+      </div>
+      </section>
         <h3>Skills</h3>
         <p>
           Team Work • Problem Solving • Explanation of Dificult Concepts •
@@ -35,24 +42,32 @@
           <li>Github: https://github.com/williamburger6</li>
           <li>LinkedIn: (Placeholder)</li>
         </ul>
-      </section>
       <section id="projects">
         <h2>Projects</h2>
         <div id="projectsCompleted">
           <article>
             <h3>Virtual Pet</h3>
             <img src="./images/VP.PNG" />
+            <button id="showVPButton">Show Virtual Pet Description</button>
+            <section class="hide">
             <p>An animal that allows you to pet and feed it</p>
+          </section>  
           </article>
           <article>
             <h3>Virtual Pet Shelter</h3>
             <img src="./images/VPS.PNG" />
+            <button id="showVPSButton">Show Virtual Pet Shelter Description</button>
+            <section class="hide">
             <p>An addition to VP which allows you to adopt and commit pets</p>
+          </section>  
           </article>
           <article>
             <h3>Virtual Pets Amok</h3>
             <img src="./images/VP Amok.PNG" />
+            <button id="showVPAmokButton">Show Virtual Pets Amok Description</button>
+            <section class="hide">
             <p>An addition to VPS which allows you to have robopets as well</p>
+          </section>  
           </article>
         </div>
 
@@ -65,12 +80,54 @@
           Control / Git
         </p>
       </section>
+      <script src="index.js"></script>
+
+      <div class="slideshow-container">
+
+        
+        <div class="myProjectSlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="VP.png" style="width:100%">
+          <div class="text">Virtual Pet</div>
+        </div>
+      
+        <div class="myProjectSlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="VPS.png" style="width:100%">
+          <div class="text">Virtual Pet Shelter</div>
+        </div>
+      
+        <div class="myProjectSlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="VP Amok.png" style="width:100%">
+          <div class="text">Virtual Pets Amok</div>
+        </div>
+      
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </main>
 
     <nav>
-      <a href="#aboutMe">About Me</a>
-      <a href="#projects">Projects</a>
+      <button id="toggleButton">Show Nav</button>
+      <section class="hide">
+
+        <a href="#aboutMe">About Me</a>
+        <a href="#projects">Projects</a>
+        </section>  
+        <script src="index.js"></script>    
     </nav>
+
+    
     <footer>&copy; Wiliam Burger</footer>
   </body>
 </html>
